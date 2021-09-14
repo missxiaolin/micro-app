@@ -1,7 +1,7 @@
 {
   "name": "xl-micro-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "## 主项目",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/missxiaolin/micro-app/issues"
   },
-  "homepage": "https://github.com/missxiaolin/micro-app#readme"
+  "homepage": "https://github.com/missxiaolin/micro-app#readme",
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
 }
