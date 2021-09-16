@@ -28,7 +28,7 @@ module.exports = {
             }
         },
         output: {
-            // 把子应用打包成umd 格式
+            // 把子应用打包成umd 格式 commonjs 浏览器 node 环境
             libraryTarget: 'umd',
             filename: 'vue2.js',
             library: 'vue2',
