@@ -6,7 +6,8 @@ import store from './store'
 let instance = null
 
 const render = () => {
-    instance = createApp(App).use(store).use(router).mount('#app')
+    instance = createApp(App)
+    instance.use(store).use(router).mount('#app')
 }
 
 if (!window.__MICRO_WEB__) {
