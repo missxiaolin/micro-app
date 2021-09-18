@@ -25,7 +25,7 @@ export const bootstrap = () => {
 }
 
 // 渲染成功
-export const mount = () => {
+export const mount = (store, props) => {
   render()
   console.log('渲染成功')
 }
