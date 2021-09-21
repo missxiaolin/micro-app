@@ -22,7 +22,7 @@ export default {
   },
   setup() {
     return {
-      loading: ref(true),
+      loading: ref(false),
     };
   },
 };
