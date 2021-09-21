@@ -1,18 +1,22 @@
 <template>
-  <Header />
-  <Loading />
+  <div>
+    <Header />
+    <MainNav />
+    <Loading />
+  </div>
 </template>
 
 <script>
 import Loading from "./components/Loading";
 import Header from "./components/Header";
-
+import MainNav from "./components/MainNav";
 
 export default {
   name: "App",
   components: {
     Loading,
-    Header
+    Header,
+    MainNav
   },
   setup() {
     return {
