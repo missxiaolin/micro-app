@@ -1,30 +1,41 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <Loading />
 </template>
 
+<script>
+import Loading from "./components/Loading";
+
+export default {
+  name: "App",
+  components: {
+    Loading,
+  },
+  setup() {
+    return {
+      loading: true,
+    };
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html,
+body,
+#micro_web_main_app {
+  width: 100%;
+  /*height: 100%;*/
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sub-container {
+  min-height: 100%;
+  position: relative;
+}
+#micro-container {
+  min-height: 100%;
+  width: 100%;
 }
 </style>
