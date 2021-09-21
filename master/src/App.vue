@@ -10,6 +10,7 @@
 import Loading from "./components/Loading";
 import Header from "./components/Header";
 import MainNav from "./components/MainNav";
+import { ref } from 'vue'
 
 export default {
   name: "App",
@@ -20,7 +21,7 @@ export default {
   },
   setup() {
     return {
-      loading: true,
+      loading: ref(true),
     };
   },
 };
