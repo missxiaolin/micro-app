@@ -2,7 +2,8 @@
   <div>
     <Header />
     <MainNav />
-    <Loading />
+    <Loading v-show="loading" />
+    <div v-show="!loading" id="micro-container">子应用内容</div>
   </div>
 </template>
 
