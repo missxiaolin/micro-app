@@ -7,3 +7,7 @@ export const patchRouter = (globalEvent, eventName) => {
         window.dispatchEvent(e)
     }
 }
+
+export const currentApp = () => {
+    
+}
