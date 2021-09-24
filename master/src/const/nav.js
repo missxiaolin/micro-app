@@ -6,13 +6,13 @@ export const NAV_LIST = [
       url: '/vue3/#/index',
       hash: '',
     },
-    {
-      name: '测试1',
-      status: false,
-      value: 3,
-      url: '/vue3/#/select',
-      hash: '',
-    },
+    // {
+    //   name: '测试1',
+    //   status: false,
+    //   value: 3,
+    //   url: '/vue3/#/select',
+    //   hash: '',
+    // },
     {
       name: '测试2',
       status: false,

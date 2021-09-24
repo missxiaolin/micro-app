@@ -18,4 +18,10 @@ export const start = () => {
     }
     // 子应用， 查找符合当前子应用内容
     const app = currentApp()
+    if (app) {
+        const { pathname, hash } = window.location
+        const url = pathname + hash
+        window.history.pushState('', '', url)
+    }
+    window.__CURRENT_SUB_APP__ = app.activeRule
 }
