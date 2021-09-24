@@ -23,5 +23,6 @@ export const start = () => {
         const url = pathname + hash
         window.history.pushState('', '', url)
     }
+    // 防止应用多次加载问题
     window.__CURRENT_SUB_APP__ = app.activeRule
 }
