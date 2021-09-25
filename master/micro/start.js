@@ -5,7 +5,11 @@ import { currentApp } from './utils/index'
 // 实现路由拦截
 rewriteRouter()
 
-export const registerMicroApps = (appList) => {
+/**
+ * @param {*} appList 应用
+ * @param {*} lifeCycle 生命周期
+ */
+export const registerMicroApps = (appList, lifeCycle) => {
     setList(appList)
 }
 
