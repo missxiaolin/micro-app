@@ -1,4 +1,5 @@
 import { getList, setList } from './const/subApps'
+import { setMainLifecycle } from './const/mainLifeCycle'
 import { rewriteRouter } from './router/rewriteRouter'
 import { currentApp } from './utils/index'
 
@@ -11,6 +12,11 @@ rewriteRouter()
  */
 export const registerMicroApps = (appList, lifeCycle) => {
     setList(appList)
+    lifeCycle.beforeLoad[0]()
+    setTimeout(() => {
+        lifeCycle.mounted[0]()
+    }, 3000)
+    setMainLifecycle(lifeCycle)
 }
 
 // 启动微前端框架
