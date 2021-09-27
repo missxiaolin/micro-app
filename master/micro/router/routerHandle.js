@@ -5,4 +5,5 @@ export const turnApp = () => {
         return
     }
     console.log('路由切换')
+    // 微前端的生命周期实现
 }
