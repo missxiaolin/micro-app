@@ -33,8 +33,15 @@ const filterApp = (key, value) => {
  * 子应用是否做了切换
  */
 export const isTurnChild = () => {
+    window.__ORIGIN_APP__ = window.__CURRENT_SUB_APP__
     if (window.__CURRENT_SUB_APP__ === window.location.pathname) {
         return false
     }
+    const currentApp = window.location.pathname.match(/(\/\w+)/)
+    if (!currentApp) {
+        return
+    }
+    // /vue3 /vue2
+    window.__CURRENT_SUB_APP__ = currentApp[0]
     return true
 }
