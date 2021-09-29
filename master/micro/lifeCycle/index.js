@@ -1,7 +1,7 @@
 import { findAppByRoute } from '../utils/index'
 import { getMainLifecycle } from '../const/mainLifeCycle'
 
-export const lifecycle = () => {
+export const lifecycle = async () => {
     // 获取到上一个子应用
     const prevApp = findAppByRoute(window.__ORIGIN_APP__)
 
@@ -11,20 +11,41 @@ export const lifecycle = () => {
     if (!nextApp) {
         return
     }    
-    if (prevApp) {
-        destroyed(prevApp)
+    if (prevApp && prevApp.destroyed) {
+        await destroyed(prevApp)
     }
-    beforeLoad(nextApp)
+    const app = await beforeLoad(nextApp)
+
+    await mounted(app)
 }
 
-export const beforeLoad = () => {
-    
+/**
+ * 加载时候执行
+ * @param {*} app 
+ * @returns 
+ */
+export const beforeLoad = async (app) => {
+    await runMainLifeCycle('beforeLoad')
+    app && app.beforeLoad && app.beforeLoad()
+
+    const appContext = null
+
+    return appContext
 }
 
-export const mounted = () => {
-
+/**
+ * 渲染完成执行
+ * @param {*} app 
+ */
+export const mounted = async (app) => {
+    app && app.mounted && app.mounted()
+    await runMainLifeCycle('mounted')
 }
 
+/**
+ * 卸载时执行
+ * @param {*} app 
+ */
 export const destroyed = async (app) => {
     app && app.destroyed && app.destroyed()
     // 对应的执行以下主应用的生命周期
