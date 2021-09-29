@@ -18,6 +18,10 @@ export const currentApp = () => {
     return filterApp('activeRule', currentUrl)
 }
 
+export const findAppByRoute = (router) => {
+    return filterApp('activeRule', router)
+} 
+
 /**
  * @param {*} key 
  * @param {*} value 

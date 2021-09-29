@@ -1,9 +1,11 @@
 import { isTurnChild } from '../utils/index'
+import { lifecycle } from '../lifeCycle/index'
 
-export const turnApp = () => {
+
+export const turnApp = async () => {
     if (!isTurnChild()) {
         return
     }
-    console.log('路由切换')
     // 微前端的生命周期实现
+    await lifecycle()
 }
