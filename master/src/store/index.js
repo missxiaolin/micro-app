@@ -6,3 +6,5 @@ export * as header from './header'
 
 // 暴露nav的方法
 export * as nav from './nav'
+
+export default {}
