@@ -8,6 +8,7 @@ function resolve(dir) {
 const port = 9004
 
 module.exports = {
+    lintOnSave: false,
     outputDir: 'dist',
     assetsDir: 'static',
     filenameHashing: true,
