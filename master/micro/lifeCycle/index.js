@@ -17,6 +17,8 @@ export const lifecycle = async () => {
     }
     const app = await beforeLoad(nextApp)
 
+    app && app.beforeLoad && app.beforeLoad()
+
     await mounted(app)
 }
 
@@ -29,9 +31,9 @@ export const beforeLoad = async (app) => {
     await runMainLifeCycle('beforeLoad')
     app && app.beforeLoad && app.beforeLoad()
 
-    const appContext = await loadHtml(app) // 获取子应用内容
+    const subApp = await loadHtml(app) // 获取子应用内容
 
-    return appContext
+    return subApp
 }
 
 /**

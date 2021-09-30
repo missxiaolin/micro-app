@@ -22,10 +22,29 @@ export const loadHtml = async (app) => {
     }
 
     ct.innerHTML = html
+
+    return app
 }
 
+/**
+ * @param {*} entry 
+ * @returns 
+ */
 export const parseHtml = async (entry) => {
     const html = await fetchResource(entry)
+    const div = document.createElement('div')
+    div.innerHTML = html
+
+    // 标签、linke、script
+    const [dom, scriptUrl, script] = await parseJs()
 
     return html
+}
+
+/**
+ * 解析html
+ * @returns 
+ */
+export const parseJs = async () => {
+    return ['', '', '']
 }

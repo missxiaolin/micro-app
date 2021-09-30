@@ -21,7 +21,7 @@ if (!window.__MICRO_WEB__) {
 
 // 开始加载结构
 export const bootstrap = () => {
-  console.log('加载成功')
+  console.log('加载成功 vue2')
 }
 
 // 渲染成功
