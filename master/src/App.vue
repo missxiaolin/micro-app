@@ -34,6 +34,7 @@ body,
 #micro_web_main_app {
   width: 100%;
   /*height: 100%;*/
+  
 }
 * {
   margin: 0;
@@ -45,7 +46,7 @@ body,
   position: relative;
 }
 #micro-container {
-  min-height: 100%;
+  height: 100vh;
   width: 100%;
 }
 </style>

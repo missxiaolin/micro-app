@@ -7,7 +7,7 @@
  * @returns 
  */
 export const performScriptForEval = (script) => {
-    return eval(script)// app module mount
+    eval(script)// app module mount
 }
 
 /**
