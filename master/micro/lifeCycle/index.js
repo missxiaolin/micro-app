@@ -41,7 +41,7 @@ export const beforeLoad = async (app) => {
  * @param {*} app 
  */
 export const mounted = async (app) => {
-    app && app.mounted && app.mounted()
+    app && app.mount && app.mount()
     await runMainLifeCycle('mounted')
 }
 
