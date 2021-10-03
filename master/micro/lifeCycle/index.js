@@ -13,6 +13,9 @@ export const lifecycle = async () => {
         return
     }    
     if (prevApp && prevApp.destroyed) {
+        if (prevApp.proxy) {
+            prevApp.proxy.inactive() // 将沙箱销毁
+        }
         await destroyed(prevApp)
     }
     const app = await beforeLoad(nextApp)
