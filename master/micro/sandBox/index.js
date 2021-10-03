@@ -11,8 +11,6 @@ export const sandBox = (app, script) => {
     // 2. 运行js文件
     const lifecycle = performScriptForEval(script, app.name)
 
-    console.log(lifecycle)
-    
     // 生命周期内容，挂载到app上
     if (isCheckLifeCycle(lifecycle)) {
         app.bootstrap = lifecycle.bootstrap
