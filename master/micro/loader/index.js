@@ -1,5 +1,5 @@
 import { fetchResource } from '../utils/fetchResource'
-import { performScriptForEval, performScriptForFunction } from '../sandBox/performScript'
+import { sandBox } from '../sandBox/index'
 
 
 /**
@@ -24,7 +24,7 @@ export const loadHtml = async (app) => {
     ct.innerHTML = dom
 
     scripts.forEach(item => {
-        performScriptForEval(item)
+        sandBox(app, item)
     })
 
     return app
