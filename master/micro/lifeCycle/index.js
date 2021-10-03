@@ -12,7 +12,7 @@ export const lifecycle = async () => {
     if (!nextApp) {
         return
     }    
-    if (prevApp && prevApp.destroyed) {
+    if (prevApp && prevApp.unmount) {
         if (prevApp.proxy) {
             prevApp.proxy.inactive() // 将沙箱销毁
         }
