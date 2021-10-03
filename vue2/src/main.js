@@ -21,6 +21,7 @@ export const bootstrap = () => {
 
 // 渲染成功
 export const mount = (store, props) => {
+  console.log('vue2 子应用渲染成功前执行')
   render()
   console.log('渲染成功')
 }
