@@ -1,12 +1,6 @@
 <template>
-    <div>
-        首页
-    </div>
+  <div class="index-container">
+    vue3 index
+  </div>
 </template>
 
-
-<script>
-export default {
-    name: 'Index'
-}
-</script>

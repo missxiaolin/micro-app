@@ -1,12 +1,26 @@
 <template>
-    <div>
-        选车
-    </div>
+  <div class="select-container">
+    select
+  </div>
 </template>
 
-
-<script>
+<script lang="ts">
 export default {
-    name: 'Select'
-}
+  name: 'index',
+  components: {
+  },
+};
 </script>
+
+<style lang="scss">
+.select{
+  &-container{
+    margin-top: 50px;
+  }
+  &-content{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+</style>
