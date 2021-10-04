@@ -1,13 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Energy from '../pages/energy/index'
+import Index from '../pages/index/index'
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/energy', // 新能源页面
+    path: '/energy',
     name: 'Energy',
     component: Energy
+  },
+  {
+    path: '/index',
+    name: 'Index',
+    component: Index
   }
 ]
 
