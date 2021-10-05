@@ -11,7 +11,7 @@ const routes = [
     component: Energy
   },
   {
-    path: '/index',
+    path: '/acs/index',
     name: 'Index',
     component: Index
   }

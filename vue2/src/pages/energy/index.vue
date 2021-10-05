@@ -1,6 +1,6 @@
 <template>
   <div class="energy-container">
-    测试vue2页面<router-link to="index">跳转index</router-link>
+    测试vue2页面<router-link to="acs/index">跳转index</router-link>
   </div>
 </template>
 
