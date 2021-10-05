@@ -5,6 +5,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'EnergyIndex',
+    component: Energy
+  },
+  {
     path: '/index',
     name: 'Energy',
     component: Energy

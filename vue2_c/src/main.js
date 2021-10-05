@@ -27,6 +27,6 @@ export const mount = (store, props) => {
 
 // 卸载成功
 export const unmount = () => {
-  console.log('测试')
+  // console.log('测试')
   // console.log('卸载', instance)
 }
