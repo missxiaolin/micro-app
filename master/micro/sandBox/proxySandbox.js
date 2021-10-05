@@ -2,7 +2,7 @@
 
 let defaultValue = {} // 子应用的沙箱容器
 
-export class ProxySandbox {
+export default class ProxySandbox {
     constructor() {
         this.proxy = null;
 
