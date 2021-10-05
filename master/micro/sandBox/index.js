@@ -1,5 +1,6 @@
 import { performScriptForEval } from './performScript'
 import SnapShotSandbox from './snapShotSandbox'
+import { ProxySandbox } from './proxySandbox'
 
 
 const isCheckLifeCycle = lifecycle => lifecycle && lifecycle.bootstrap && lifecycle.mount && lifecycle.unmount
