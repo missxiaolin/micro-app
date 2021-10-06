@@ -8,14 +8,15 @@
  * @returns 
  */
 export const performScriptForEval = (script, appName, global) => {
+  // library window.appName
+  window.proxy = global
   const scriptText = `
-    () => {
+    ((window) => {
       ${script}
-      return window['${appName}']
-    }
+      return window['${appName}'] 
+    })(window.proxy)
   `
-  // librart
-  return eval(scriptText).call(global, global)  // app module mount
+  return eval(scriptText)// app module mount
 }
 
 /**
@@ -26,9 +27,13 @@ export const performScriptForEval = (script, appName, global) => {
  * @returns 
  */
 export const performScriptForFunction = (script, appName, global) => {
+  window.proxy = global
+
   const scriptText = `
-    ${script}
-    return window['${appName}']
+    return ((window) => {
+      ${script}
+      return window['${appName}']
+    })(window.proxy)
   `
-  return new Function(scriptText).call(global, global)
+  return new Function(scriptText)()
 }

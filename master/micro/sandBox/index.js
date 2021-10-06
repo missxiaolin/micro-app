@@ -1,4 +1,4 @@
-import { performScriptForEval } from './performScript'
+import { performScriptForEval, performScriptForFunction } from './performScript'
 import SnapShotSandbox from './snapShotSandbox'
 import ProxySandbox from './proxySandbox'
 
@@ -18,7 +18,7 @@ export const sandBox = (app, script) => {
     window.__MICRO_WEB__ = true
 
     // 2. 运行js文件
-    const lifecycle = performScriptForEval(script, app.name, app.proxy.proxy)
+    const lifecycle = performScriptForFunction(script, app.name, app.proxy.proxy)
 
     // 生命周期内容，挂载到app上
     if (isCheckLifeCycle(lifecycle)) {
