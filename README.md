@@ -12,3 +12,9 @@
 - react16子应用
 - srvice 服务端
 - platform 发布平台
+
+## css 样式隔离
+
+- css modules
+- shadow dom
+- minicss
