@@ -1,5 +1,5 @@
 <template>
-  <div id="app-vue   1">
+  <div id="m-vue 2">
     <router-view></router-view>
   </div>
 </template>

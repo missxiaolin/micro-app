@@ -5,6 +5,7 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
+const packageName = 'vue2';
 const port = 9005;
 
 module.exports = {
@@ -34,8 +35,8 @@ module.exports = {
       // library: `${packageName}`,
       // libraryTarget: 'umd',
       libraryTarget: 'umd',
-      filename: 'vue2_1.js',
-      library: 'vue2_1',
+      filename: 'vue2.js',
+      library: 'mac',
       jsonpFunction: `webpackJsonp_${name}`
     },
   },

@@ -36,7 +36,7 @@ module.exports = {
       // libraryTarget: 'umd',
       libraryTarget: 'umd',
       filename: 'vue2.js',
-      library: 'vue2',
+      library: 'vac',
       jsonpFunction: `webpackJsonp_${name}`
     },
   },

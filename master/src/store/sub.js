@@ -1,13 +1,13 @@
 export const subNavList = [
     {
-        name: 'vue2',
-        activeRule: '/vue2',
+        name: 'vac',
+        activeRule: '/vac',
         container: '#micro-container',
         entry: '//localhost:9004/'
     },
     {
-        name: 'vue3',
-        activeRule: '/vue3',
+        name: 'mac',
+        activeRule: '/mac',
         container: '#micro-container',
         entry: '//localhost:9005/'
     },

@@ -1,6 +1,6 @@
 <template>
   <div class="energy-container">
-    进来页面了，vue2 子应用
+    测试第二个vue2页面<router-link to="acs/index">跳转index</router-link>
   </div>
 </template>
 
@@ -20,5 +20,13 @@ export default {
 </script>
 
 <style lang="scss">
-
+.energy{
+  &-container{
+    width: 100%;
+  }
+  &-content{
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
 </style>
