@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Header /> -->
+    <Header v-show="headerStatus" />
     <MainNav />
     <Loading v-show="loading" />
     <div v-show="!loading" id="micro-container">子应用内容</div>
@@ -9,20 +9,21 @@
 
 <script>
 import Loading from "./components/Loading";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 import MainNav from "./components/MainNav";
-import { loading } from './store'
+import { loading, header } from './store'
 
 export default {
   name: "App",
   components: {
     Loading,
-    // Header,
+    Header,
     MainNav,
   },
   setup() {
     return {
       loading: loading.loadingStatus,
+      headerStatus: header.headerStatus,
     };
   },
 };
