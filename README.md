@@ -18,3 +18,8 @@
 - css modules
 - shadow dom
 - minicss
+
+## 父子应用通信
+
+- props
+- customevent
