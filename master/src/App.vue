@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="micro_box">
     <Header v-show="headerStatus" />
     <MainNav />
     <Loading v-show="loading" />
@@ -47,7 +47,17 @@ body,
   position: relative;
 }
 #micro-container {
+  height: auto;
+  overflow: hidden;
   // height: 100vh;
   width: 100%;
+  display: flex;
+  flex: 1;
+}
+.micro_box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: flex-start;
 }
 </style>
