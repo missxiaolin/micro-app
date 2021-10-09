@@ -11,7 +11,7 @@
 import Loading from "./components/Loading";
 import Header from "./components/Header";
 import MainNav from "./components/MainNav";
-import { loading, header } from './store'
+import { loading, header } from "./store";
 
 export default {
   name: "App",
@@ -35,7 +35,6 @@ body,
 #micro_web_main_app {
   width: 100%;
   /*height: 100%;*/
-  
 }
 * {
   margin: 0;
