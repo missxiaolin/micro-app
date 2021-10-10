@@ -1,7 +1,7 @@
 <template>
   <div class="micro_box">
     <Header v-show="headerStatus" />
-    <MainNav />
+    <MainNav v-show="navStatus" />
     <Loading v-show="loading" />
     <div v-show="!loading" id="micro-container">子应用内容</div>
   </div>
@@ -11,7 +11,7 @@
 import Loading from "./components/Loading";
 import Header from "./components/Header";
 import MainNav from "./components/MainNav";
-import { loading, header } from "./store";
+import { loading, header, nav } from "./store";
 
 export default {
   name: "App",
@@ -24,6 +24,7 @@ export default {
     return {
       loading: loading.loadingStatus,
       headerStatus: header.headerStatus,
+      navStatus: nav.navStatus,
     };
   },
 };
