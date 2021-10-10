@@ -2,6 +2,11 @@ import { getList, setList } from './const/subApps'
 import { setMainLifecycle } from './const/mainLifeCycle'
 import { rewriteRouter } from './router/rewriteRouter'
 import { currentApp } from './utils/index'
+import { Custom } from './customevent/index'
+
+const custom = new Custom()
+
+window.microCustom = custom
 
 // 实现路由拦截
 rewriteRouter()
