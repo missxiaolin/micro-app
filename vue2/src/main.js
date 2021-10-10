@@ -21,6 +21,7 @@ export const bootstrap = () => {
 
 // 渲染成功
 export const mount = (app) => {
+  // app.appInfo.header.changeHeader(false)
   render()
 }
 
