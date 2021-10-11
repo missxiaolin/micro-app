@@ -7,11 +7,18 @@ export const NAV_LIST = [
       hash: '',
     },
     {
-      name: '测试2',
+      name: 'vac',
       status: false,
       value: 1,
       url: '/vac/#/energy',
       hash: '',
     },
+    {
+      name: 'mad',
+      status: false,
+      value: 1,
+      url: '/mad/#/index',
+      hash: '',
+    }
   ]
   

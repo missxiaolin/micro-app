@@ -15,4 +15,11 @@ export const subNavList = [
         entry: '//localhost:9005/',
         appInfo
     },
+    {
+        name: 'mad',
+        activeRule: '/mad',
+        container: '#micro-container',
+        entry: '//localhost:9006/',
+        appInfo
+    }
 ]
