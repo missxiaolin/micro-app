@@ -149,3 +149,14 @@ module.exports = {
   }
 }
 ~~~
+
+## 全局store
+
+~~~
+import { createStore } from '../../micro/index'
+const store = createStore()
+window.store = store
+store.subscribe((newValue, oldValue) => {
+  console.log(newValue, oldValue, '---')
+})
+~~~
