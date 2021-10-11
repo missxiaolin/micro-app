@@ -32,8 +32,10 @@ export const start = () => {
     if (app) {
         const { pathname, hash } = window.location
         const url = pathname + hash
+
+        // 防止应用多次加载问题
+        window.__CURRENT_SUB_APP__ = app.activeRule
+
         window.history.pushState('', '', url)
     }
-    // 防止应用多次加载问题
-    window.__CURRENT_SUB_APP__ = app.activeRule
 }
