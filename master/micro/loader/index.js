@@ -1,6 +1,7 @@
 import { fetchResource } from '../utils/fetchResource'
 import { sandBox } from '../sandBox/index'
 
+const cache = {} // 根据子应用应用名称
 
 /**
  * 加载html方法
@@ -14,7 +15,7 @@ export const loadHtml = async (app) => {
     // 子应用的入口
     let entry = app.entry
 
-    const [dom, scripts] = await parseHtml(entry)
+    const [dom, scripts] = await parseHtml(entry, app.name)
     const ct = document.querySelector(container)
 
     if (!ct) {
@@ -34,7 +35,10 @@ export const loadHtml = async (app) => {
  * @param {*} entry 
  * @returns 
  */
-export const parseHtml = async (entry) => {
+export const parseHtml = async (entry, name) => {
+    if (cache[name]) {
+        return cache[name]
+    }
     const html = await fetchResource(entry)
 
     let allScript = []
@@ -46,6 +50,8 @@ export const parseHtml = async (entry) => {
 
     const fetchedScripts = await Promise.all(scriptUrl.map(async item => fetchResource(item)))
     allScript = script.concat(fetchedScripts)
+
+    cache[name] = [dome, allScript]
 
     return [dom, allScript]
 }
