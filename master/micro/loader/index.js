@@ -51,7 +51,7 @@ export const parseHtml = async (entry, name) => {
     const fetchedScripts = await Promise.all(scriptUrl.map(async item => fetchResource(item)))
     allScript = script.concat(fetchedScripts)
 
-    cache[name] = [dome, allScript]
+    cache[name] = [dom, allScript]
 
     return [dom, allScript]
 }
