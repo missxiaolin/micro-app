@@ -3,6 +3,7 @@ import { setMainLifecycle } from './const/mainLifeCycle'
 import { rewriteRouter } from './router/rewriteRouter'
 import { currentApp } from './utils/index'
 import { Custom } from './customevent/index'
+import { prefetch } from './loader/prefetch'
 
 const custom = new Custom()
 
@@ -39,4 +40,5 @@ export const start = () => {
         window.history.pushState('', '', url)
     }
     // 预加载
+    prefetch()
 }
