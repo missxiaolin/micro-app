@@ -38,4 +38,5 @@ export const start = () => {
 
         window.history.pushState('', '', url)
     }
+    // 预加载
 }
