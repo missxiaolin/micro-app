@@ -3,9 +3,8 @@ import { lifecycle } from '../lifeCycle/index'
 
 
 export const turnApp = async () => {
-    if (!isTurnChild()) {
-        return
+    if (isTurnChild()) {
+        // 微前端的生命周期执行
+        await lifecycle()
     }
-    // 微前端的生命周期实现
-    await lifecycle()
 }

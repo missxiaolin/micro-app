@@ -33,6 +33,7 @@ export const loadHtml = async (app) => {
 
 /**
  * @param {*} entry 
+ * @param {*} name 
  * @returns 
  */
 export const parseHtml = async (entry, name) => {
@@ -45,19 +46,17 @@ export const parseHtml = async (entry, name) => {
     const div = document.createElement('div')
     div.innerHTML = html
 
-    // 标签、linke、script
     const [dom, scriptUrl, script] = await getResources(div, entry)
 
     const fetchedScripts = await Promise.all(scriptUrl.map(async item => fetchResource(item)))
-    allScript = script.concat(fetchedScripts)
 
+    allScript = script.concat(fetchedScripts)
     cache[name] = [dom, allScript]
 
     return [dom, allScript]
 }
 
 /**
- * 解析html
  * @param {*} root 
  * @param {*} entry 
  * @returns 
@@ -67,13 +66,10 @@ export const getResources = async (root, entry) => {
     const script = [] // 写在script中的js脚本内容
     const dom = root.outerHTML
 
-    /**
-     * 深度解析
-     * @param {*} element 
-     */
+    // 深度解析
     function deepParse(element) {
         const children = element.children
-        const parent = element.parent
+        const parent = element.parent;
 
         // 处理位于 script 中的内容
         if (element.nodeName.toLowerCase() === 'script') {
@@ -112,5 +108,6 @@ export const getResources = async (root, entry) => {
     }
 
     deepParse(root)
+
     return [dom, scriptUrl, script]
 }
