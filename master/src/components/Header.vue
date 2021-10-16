@@ -7,7 +7,7 @@
         </div>
         <div class="main-user-info-text">
           <!-- 用户名 -->
-          sunmer08764
+          xiaolin
         </div>
         <div class="main-user-info-arrow">
           <img src="../assets/gray-arrow.png" alt="" />
@@ -19,7 +19,7 @@
         </div>
         <div class="main-user-info-text">
           <!-- 城市名称 -->
-          北京
+          上海
         </div>
         <div class="main-user-info-arrow">
           <img src="../assets/gray-arrow.png" alt="" />
