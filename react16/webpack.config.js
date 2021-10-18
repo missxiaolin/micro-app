@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'react16.js',
-    library: 'react16',
+    library: 'acc',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     publicPath: 'http://localhost:9003'
