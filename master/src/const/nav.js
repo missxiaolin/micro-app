@@ -26,6 +26,13 @@ export const NAV_LIST = [
       value: 1,
       url: '/sad/#/index',
       hash: '',
+    },
+    {
+      name: 'acc',
+      status: false,
+      value: 1,
+      url: '/acc/#/login',
+      hash: '',
     }
   ]
   
