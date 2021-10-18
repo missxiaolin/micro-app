@@ -9,7 +9,7 @@ class BasicMap extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Index}/>
+        <Route path="/index" component={Index}/>
       </Router>
     )
   }
