@@ -1,4 +1,5 @@
-import { registerMicroApps, start } from '../../micro/index'
+// import { registerMicroApps, start } from '../../micro/index'
+import { registerMicroApps, start } from 'xl-micro'
 
 import { loading } from '../store'
 
